@@ -6,9 +6,12 @@ import time
 
 if __name__ == '__main__':
 
-	options = webdriver.ChromeOptions()
-	options.add_argument('user-agent="Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19"')
-	driver = webdriver.Chrome('J:\迅雷下载\chromedriver.exe', chrome_options=options)
+	#options = webdriver.ChromeOptions()
+	options = webdriver.FirefoxOptions
+	#options.add_argument('user-agent="Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19"')
+	#options.add_argument('user-agent="Mozilla/5.0')
+	#driver = webdriver.Chrome('J:\迅雷下载\chromedriver.exe', chrome_options=options)
+	driver = webdriver.Firefox(executable_path=r'd:\document\resource\geckodriver.exe')
 	driver.get('https://wenku.baidu.com/view/aa31a84bcf84b9d528ea7a2c.html')
 
 	html = driver.page_source
